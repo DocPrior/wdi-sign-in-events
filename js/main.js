@@ -7,12 +7,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var close = document.querySelector('.close');
 
+  var submit = document.querySelector('.submit');
+
+  var input = document.querySelectorAll('input')
+
   signIn.addEventListener('click', function () {
     modal.style.display = 'block';
   });
 
   close.addEventListener('click', function () {
     modal.style.display = 'none';
+  });
+
+  submit.addEventListener('click', function () {
+    input.forEach(function(input) {
+      input.classList.add('error');
+    })
   });
 
 });
