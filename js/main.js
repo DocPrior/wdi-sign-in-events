@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var input = document.querySelectorAll('input')
 
+  var user = document.querySelector('#user');
+
   signIn.addEventListener('click', function () {
     modal.style.display = 'block';
   });
@@ -25,4 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     })
   });
 
+  user.addEventListener('click', function () {
+    input.forEach(function(input) {
+        input.classList.remove('error');
+    })
+  });
 });
